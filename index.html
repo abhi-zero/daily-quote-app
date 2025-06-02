@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Quote App</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="quote-app">
+    <div class="container">
+      <header>
+        <h1>Daily Quote</h1>
+        <div class="utility-buttons">
+            <img src="./assets/icons/share-fill.svg" width="30" height="30" id="share-btn-open" role="button" alt="share" title="Share" data-dialog-target="share-dialog">
+
+            <dialog id="share-dialog" class="dialog-box  dialog-box-share">
+              <div class="share-btn-container">
+                <img src="./assets/icons/whatsapp-fill.svg" width="25" height="20" id="share-btn-whatsapp" role="button" alt="share" title    ="Whatsapp">
+              <img src="./assets/icons/twitter-x-fill.svg" width="20" height="20" id="btn-twitter" role="button" alt="share" title="Twitter">
+              <img src="./assets/icons/facebook-circle-fill.svg" width="20" height="20" id="btn-facebook" role="button" alt="share" title="Facebook">
+              <img src="./assets/icons/instagram-fill.svg" width="20" height="20" id="btn-instagram" role="button" alt="share" title="Instagram">
+              <img src="./assets/icons/close-circle-fill.svg" width="20" height="20" id="btn-close" role="button" alt="close" title="Close" data-dialog-close="share-dialog">
+              </div>
+            </dialog>
+            <img src="./assets/icons/history-fill.svg" width="30" height="30" id="history-btn-open" role="button" alt="history" title="History" data-dialog-target="history-dialog">
+            <dialog id="history-dialog"  class="dialog-box dialog-box-history">
+              <div class="section-head">
+                <h2>History</h3>
+                <img src="./assets/icons/close-circle-fill.svg" width="20" height="20" id="btn-close" role="button" alt="close" title="Close" data-dialog-close="history-dialog">
+              </div>
+              <ul id="history-list">
+                <li>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p> 
+                  <p>Author 1</p>
+                </li>
+                <li>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p> 
+                  <p>Author 1</p>
+                </li>
+                </ul>
+            </dialog>
+        </div>
+      </header>
+    <main class="quote-container">
+      <p id="quote-text">"Click below to fetch a quote! "</p>
+      <p id="quote-author">- Author</p>
+    </main>
+    <div class="utility-section">
+      <p class="time-display">Next Quote in - <span id="time-display-value">00:00:00</span></p>
+      <img src="./assets/icons/refresh-line.svg" width="30" height="30" id="refresh-btn" role="button" alt="refresh" title="Refresh">
+    </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
