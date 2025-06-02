@@ -1,0 +1,172 @@
+:root{
+  --bodyBG-color: hsl(240, 100%, 10%);
+  --cardBG-color: hsl(240, 100%, 6%);
+  --accent-color: hsl(240, 6%, 91%);
+  --neutral-color: hsl(218, 11%, 65%);
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family:  sans-serif; /* Set a default font */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bodyBG-color);
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.quote-app{
+  display: grid;
+  height:100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  width: 600px;
+  min-height: 400px;
+  background-color: var(--cardBG-color);
+  padding: 2rem 2.5rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr minmax(200px, auto) 1fr;
+  border-radius: 16px;
+  border: 1px solid var(--neutral-color);
+}
+
+.container header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container header h1{
+  color: var(--accent-color);
+}
+.container header .utility-buttons{
+  display: grid;
+  grid-template-columns: repeat(2, 30px);
+  gap: 10px;
+}
+
+img[role="button"]{
+  cursor: pointer;  
+  transition: scale 0.3s ease;
+}
+img[role="button"]:hover{
+  scale: 1.5;
+}
+.quote-container{
+  display: grid;
+  grid-template-columns: 530px;
+  grid-template-rows: minmax(130px, auto) 1fr;
+  border-bottom: 1px solid var(--neutral-color);
+}
+
+.quote-container #quote-text{
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--accent-color);
+  line-height: 1.2;
+  text-wrap: pretty;
+}
+
+.quote-container #quote-author{
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--neutral-color);
+  justify-self: end ;
+}
+
+.utility-section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.utility-section .time-display{
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--neutral-color);
+}
+
+
+
+/* dialog boxs */
+.dialog-box{
+  position: absolute;
+  border-radius: 16px;
+  border: 1px solid var(--neutral-color);
+  background-color: var(--cardBG-color);
+  padding: 1rem;
+  
+}
+.share-btn-container{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+}
+
+.dialog-box-history{
+  color: var(--accent-color);
+  width: 300px;
+  height: 200px;
+}
+
+.dialog-box-history .section-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dialog-box-history ul{
+  height: 120px;
+  padding: 7px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: scroll;
+  overflow-wrap: break-word;
+}
+
+.dialog-box-history ul::-webkit-scrollbar{
+  width: 5px;
+}
+
+.dialog-box-history ul::-webkit-scrollbar-thumb{
+  background-color: var(--neutral-color);
+  border-radius: 10px;
+}
+
+
+
