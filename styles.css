@@ -89,7 +89,7 @@ img[role="button"]:hover{
 .quote-container{
   display: grid;
   grid-template-columns: 530px;
-  grid-template-rows: minmax(130px, auto) 1fr;
+  grid-template-rows: 150px 1fr;
   border-bottom: 1px solid var(--neutral-color);
 }
 
@@ -99,6 +99,17 @@ img[role="button"]:hover{
   color: var(--accent-color);
   line-height: 1.2;
   text-wrap: pretty;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.quote-container #quote-text::-webkit-scrollbar{
+  width: 5px;
+}
+
+.quote-container #quote-text::-webkit-scrollbar-thumb{
+  background-color: var(--neutral-color);
+  border-radius: 10px;
 }
 
 .quote-container #quote-author{
@@ -129,7 +140,7 @@ img[role="button"]:hover{
   border: 1px solid var(--neutral-color);
   background-color: var(--cardBG-color);
   padding: 1rem;
-  
+  z-index: 99;
 }
 .share-btn-container{
   display: flex;
