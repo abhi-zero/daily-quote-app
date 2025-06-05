@@ -1,3 +1,5 @@
+import { animateQuote, animateAuthor } from "./animation.js";
+
 let quoteText = document.getElementById("quote-text");
 let quoteAuthor = document.getElementById("quote-author");
 
@@ -13,6 +15,8 @@ async function fetchQuote(){
     const author = data.author;
     quoteText.textContent = quote;
     quoteAuthor.textContent = `- ${author}`; 
+    animateQuote(quoteText);
+    animateAuthor(quoteAuthor);
    }
     catch (error){
         console.error("Error fetching quote:", error);
@@ -22,6 +26,7 @@ async function fetchQuote(){
 }
 
 fetchQuote();
+
 
 function updateTimeDisplay(){
     const timeDisplay = document.getElementById("time-display-value");
