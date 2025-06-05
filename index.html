@@ -11,12 +11,13 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+  <div class="circle-cursor"></div>
   <div class="quote-app">
     <div class="container">
       <header>
-        <h1>Daily Quote</h1>
+        <h1 class="title" data-cursor="bottom">DailyQuote</h1>
         <div class="utility-buttons">
-            <img src="./assets/icons/share-fill.svg" width="30" height="30" id="share-btn-open" role="button" alt="share" title="Share" data-dialog-target="share-dialog">
+            <img src="./assets/icons/share-fill.svg" width="30" height="30" id="share-btn-open" role="button" alt="share" title="Share" data-dialog-target="share-dialog" data-cursor="bottom">
 
             <dialog id="share-dialog" class="dialog-box  dialog-box-share">
               <div class="share-btn-container">
@@ -27,7 +28,7 @@
               <img src="./assets/icons/close-circle-fill.svg" width="20" height="20" id="btn-close" role="button" alt="close" title="Close" data-dialog-close="share-dialog">
               </div>
             </dialog>
-            <img src="./assets/icons/history-fill.svg" width="30" height="30" id="history-btn-open" role="button" alt="history" title="History" data-dialog-target="history-dialog">
+            <img src="./assets/icons/history-fill.svg" width="30" height="30" id="history-btn-open" role="button" alt="history" title="History" data-dialog-target="history-dialog" data-cursor="bottom">
             <dialog id="history-dialog"  class="dialog-box dialog-box-history">
               <div class="section-head">
                 <h2>History</h3>
@@ -47,18 +48,18 @@
         </div>
       </header>
     <main class="quote-container">
-      <p id="quote-text"></p>
-      <p id="quote-author"></p>
+      <p id="quote-text" data-cursor="bottom" ></p>
+      <p id="quote-author" data-cursor="bottom" ></p>
     </main>
     <div class="utility-section">
-      <p class="time-display">Next Quote in - <span id="time-display-value">00:00:00</span></p>
-      <img src="./assets/icons/refresh-line.svg" width="30" height="30" id="refresh-btn" role="button" alt="refresh" title="Refresh">
+      <p class="time-display" data-cursor="bottom">Next Quote in - <span id="time-display-value">00:00:00</span></p>
+      <img src="./assets/icons/refresh-line.svg" width="30" height="30" id="refresh-btn" role="button" alt="refresh" title="Refresh" data-cursor="bottom">
     </div>
     </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="./animation.js"></script>
-  <script src="./script.js"></script>
+  <script src="./script.js" type="module"></script>
 </body>
 </html>
